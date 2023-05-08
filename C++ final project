@@ -1,0 +1,43 @@
+//M Varaha
+//Vivekanandha college of engineering for women
+
+#include <iostream>
+using namespace std;
+
+class WhetherApp {
+   private:
+    int temperature;
+   public:
+    void setTemperature(int temp) {
+        temperature = temp;
+    }
+
+    void determineWeather() {
+        switch (temperature) {
+            case 0 ... 9:
+                cout << "It's cold outside." << endl;
+                break;
+            case 10 ... 20:
+                cout << "It's cool outside." << endl;
+                break;
+            case 21 ... 30:
+                cout << "It's warm outside." << endl;
+                break;
+            default:
+                cout << "It's hot outside." << endl;
+        }
+    }
+};
+
+int main() {
+    WhetherApp app;
+    int temp;
+
+    cout << "Enter the temperature: ";
+    cin >> temp;
+
+    app.setTemperature(temp);
+    app.determineWeather();
+
+    return 0;
+}
